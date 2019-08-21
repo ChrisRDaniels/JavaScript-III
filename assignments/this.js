@@ -35,15 +35,15 @@ mySelf.myLastName();
 // Principle 3
 // code example for New Binding
 
-function Car(make, model, year) { //initial object function
+function Truck(make, model, year) { //initial object function
     this.make = make;
     this.model = model;
     this.year = year;
   }
   
-  var car1 = new Car('Ford', 'Ranger', 1995); //implement new constructor and arguments(data)
+  var Truck1 = new Truck('Ford', 'Ranger', 1995); //implement new constructor and arguments(data)
   
-  console.log(car1.make);
+  console.log(Truck1.make);
   // expected output: "Ford"
 
 // Principle 4
