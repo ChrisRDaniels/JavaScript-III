@@ -88,9 +88,7 @@ Humanoid.prototype.greet = function () {
     healthPoints: 5,
     name: 'Bruce',
     team: 'Mage Guild',
-    weapons: [
-      'Staff of Shamalama',
-    ],
+    weapons: 'Staff of Shamalama',
     language: 'Common Tongue',
   });
 
