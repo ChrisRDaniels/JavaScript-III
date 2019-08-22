@@ -115,9 +115,6 @@ Humanoid.prototype.greet = function () {
       length: 1,
       width: 2,
       height: 4,
-      greet: function() {
-        return `${this.name} offers a greeting in ${this.language}`;
-      }
     },
     healthPoints: 10,
     name: 'Lilith',
