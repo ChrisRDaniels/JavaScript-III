@@ -15,13 +15,14 @@
   * dimensions (These represent the character's size in the video game)
   * destroy() // prototype method that returns: `${this.name} was removed from the game.`
 */
-function GameObject (createdAt, name, dimensions) {
-this.createdAt = createdAt,
-this.name = name,
-this.dimensions = dimensions
+function GameObject (character) {
+this.createdAt = character.createdAt,
+this.name = character.name,
+this.dimensions = character.dimensions
 }
+
 GameObject.prototype.destroy = function() {
-return `${this.name} was removed from the game.`
+return `${this.name} was removed from the game.`;
   }
 
 
@@ -36,15 +37,14 @@ return `${this.name} was removed from the game.`
 function CharacterStats (attributes) {
   GameObject.call(this, attributes);
   this.isCharacterStats = attributes.isCharacterStats;
-  this.destroy = attributes.destroy,
+  
   this.name - attributes.name,
-  this.healthPoints = attributes.healthPoints,
-  this.takeDamage = attributes.takeDamage
+  this.healthPoints = attributes.healthPoints
 };
 
 CharacterStats.prototype = Object.create(GameObject.prototype);
 CharacterStats.prototype.takeDamage = function () {
-  return `${this.name} took damage.`
+  return `${this.name} took damage.`;
 };
 
 /*
@@ -61,9 +61,7 @@ function Humanoid(attributes) {
   CharacterStats.call(this, attributes);
   this.team = attributes.team,
   this.weapons = attributes.weapons,
-  this.language = attributes.language,
-  this.greet = attributes.greet,
-  this.isHumanoid = attributes.isHumanoid
+  this.language = attributes.language
 };
 
 Humanoid.prototype = Object.create(CharacterStats.prototype);
@@ -119,6 +117,9 @@ Humanoid.prototype.greet = function () {
       length: 1,
       width: 2,
       height: 4,
+      greet: function() {
+        return `${this.name} offers a greeting in ${this.language}`;
+      }
     },
     healthPoints: 10,
     name: 'Lilith',
