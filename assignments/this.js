@@ -18,7 +18,7 @@
 function whatsThis() {
     return this;
   }
-console.log(this === window); //will return true in browser console
+console.log(this); //will return true in browser console
 
 // Principle 2
 // code example for Implicit Binding
